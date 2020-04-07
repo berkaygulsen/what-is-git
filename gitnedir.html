@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link crossorigin="anonymous" href="css/bootstrap.css" rel="stylesheet">
+    <title>Git Teknolojisi</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center m-4"><code>git</code> Teknolojisi</h1>
+
+    <ol class="list-group">
+        <li class="card">
+            <div class="card-body">
+                <h2>1. <code>git</code> nedir?</h2>
+                <p>
+                    &nbsp&nbsp&nbsp&nbsp<code>git</code>, yazdığımız projeleri ve uygulamaları, bilgisayarımızda ya da
+                    harici disklerde değil de
+                    internet üzerinde tutmamızı ve yönetmemizi sağlayan bir versiyon kontrol sistemidir.
+                    GNU Genel Kamu Lisansı’nın 2. sürümüyle lisanslanmış bir özgür yazılımdır.
+                    Linus Torvalds tarafından tasarlanıp geliştirilmiştir.
+                </p>
+                <p>
+                    &nbsp&nbsp&nbsp&nbsp<code>git</code>, uzun çalışmalar sonucu geliştirdiğimiz ürünlerin hata
+                    yaptığımızda ve yaptığımız hatayı geri döndürmek gerektiğinde,
+                    projede çalışan kişi sayısı 1'den fazla olduğunda, projede yaptığımız değişikliklerin kontrollü
+                    olması gerektiğinde işe yarayan
+                    bir araçtır.
+                </p>
+
+                <div class="card">
+                    <div class="card-body">
+                        <p class="lead">
+                            <code>git</code> ile çalışırken, kaydettiğimiz dosyadan ayrı olarak bir de
+                            kaydedilen verileri <code>git</code> için ayrı olarak onaylanarak ayrı şekilde ve kontrollü
+                            olarak kaydederiz. Buna <code>git commit</code> denir.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <p>
+                    <code>git</code> versiyon kontrolünü ve takibini sizin adınıza otomatik olarak yapar. Siz şimdiki
+                    versiyondan memnun olmadığınızda, hatalarınızdan kurtulamadığınızda
+                    istediğiniz bir eski versiyona geri dönebilirsiniz.
+                    <code>git</code>'in en yaygın kullanım alanı ise grup çalışmalarıdır. Üzerinde birden fazla kişinin
+                    çalıştığı projelerin, takip ve yönetim açısından zorluğundan doğan ihtiyaca hizmet eden
+                    <code>git</code>
+                    projenin büyüklüğü farketmeksizin çoklu ya da uzaktan çalışmayı, projeyi yönetmeyi kolaylaştırır.
+                </p>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-body">
+                <h2>2. <code>git</code> nasıl kullanılır?</h2>
+                <p>
+                    Öncelikle <code>git</code> çevrimiçi kullanılması zorunlu olan bir şey değildir. Yerel olarak, kendi
+                    kişisel bilgisayarınızda da <code>git</code> kullanabilirsiniz.
+                    Ancak bu yedekleme mantığına aykırı ve tehlikelidir. Üzerinde uzun bir süre çalıştığınız projeyi
+                    elektrik kesintisi ya da elektronik bir arıza sebebiyle kaybetmek istemezsiniz :)
+                </p>
+                <p>
+                    <code>git</code> kullanmak için ilk olarak <code>git</code>'i yüklemeliyiz.
+                <div>
+
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Mac için <code>git</code></h3>
+                        <p>
+                            <code>git</code>'i Mac'e kurmanın birkaç yolu vardır. Öncelikle Mac'inizde <code>git</code>'in
+                            kurulu olup olmadığını öğrenmek için
+                            <kbd>git --version</kbd> komutunu <code>terminal</code>'e yazmanız gerek. Eğer output <code
+                                style="color: green">git version 2.7.0 (Apple Git-66)</code>
+                            gibi bir şey olarak dönerse Mac'inizde <code>git</code> kurulu demektir.
+                        </p>
+                        <p>
+                            Eğer kurulu değilse, <a href="https://sourceforge.net/projects/git-osx-installer/files/">buradan</a>
+                            en son versiyonunu indirip kurabiliriz.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Windows için <code>git</code></h3>
+                        <p>
+                            Windows için <code>git</code> kurulumunu, <a href="https://git-for-windows.github.io/">buradan</a>
+                            en son versiyonunu indirip yapabiliriz.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p>
+                    Projemizi başlattıktan sonra ya da halihazırda olan projemizi versiyon kontrolle güçlendirmek
+                    istediğimizde, <code>console</code>(Windows)
+                    ya da <code>terminal</code>(Mac / Linux)'i açıp projemizin olduğu dizine gidiyoruz. Örneğin bu
+                    <code>C:\Users\USER\Documents\Projelerim\git-practice</code> olsun.
+                    <br>
+
+                <p>
+                    <code>terminale:</code> <br><kbd>$ cd C:\Users\USER\Documents\Projelerim\git-practice</kbd> <br>
+                    <br>
+                    <abbr class="text-danger" title="başında $ işareti olmadan(bu işaret console command işaretidir)">yazıp</abbr>
+                    <kbd>Enter</kbd>'a
+                    basarak bu dizine gidebiliriz. Projemizin dizinine gittikten sonra yine <code>terminale</code>
+                    <kbd>git init</kbd> yazıp <kbd>Enter</kbd>'a bastığımızda projemizin <code>git</code> yapısı
+                    otomatik olarak oluşturulacaktır. İlk oluşturulduğunda <code>git</code> dizinimizin içi boştur.
+                    <code>git</code> dizinimizi
+                    <br> <br>
+                    <kbd>$ git add .</kbd>
+                    <br> <br>
+                    komutuyla proje dosyalarımızı <code>stage</code> dediğimiz aşamaya getirerek doldurmaya
+                    başlayabiliriz. <code>stage</code> aşaması bizim versiyon kontrolü yapılmasını istediğimiz dosyaları
+                    <code>git</code>'in görüş alanına almamız gibi düşünülebilir.
+                </p>
+                <p>
+                    Artık eklediğimiz dosyaları <code>commit</code> ederek projemizi <code>git</code> için kalıcı hale
+                    getirebiliriz. Bunun için:
+                    <br> <br>
+                    <kbd>$ git commit -m "İlk commit mesajımız, proje dosyalarımızı git'e ekledik"</kbd>
+                    <br> <br>
+                <p>
+                    komutunu kullanırız. buradaki <code>-m</code> "message" kelimesinin kısaltılmışıdır. Komutlarda kısa
+                    çizgi ile verilen bu tür opsiyonlara <code>flag</code> denir. <code>-m</code> den sonra yazdığımız
+                    <code>"İlk commit mesajımız, proje dosyalarımızı git'e ekledik"</code> ise bizim bundan aylar yıllar
+                    sonra bile baktığımızda o tarih ve saatte ne iş yaptığımızı anlayabilmemiz için yazdığımız ufak
+                    mesajlardır. her commit'te bu mesajın
+                    açık ve anlaşılır bir biçimde yazılması güzel bir uygulamadır.
+                </p>
+                </p>
+                </p>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-body">
+                <h2>3. GitHub nedir?</h2>
+                <p>
+                    GitHub versiyon kontrol sistemi olarak <code>git</code> kullanan projeler için depolama hizmeti
+                    sunan bir web servisidir. Proje dosyalarımızı uzak bir dizinde depolayarak daha güvenli bir şekilde
+                    yedek alabilir, arıza ve benzeri durumlarda güvende olabiliriz.
+                    Bunun için öncelikle GitHub hesabı oluşturmamız gerekiyor. <a
+                        href="https://github.com/">GitHub.com</a>'a giderek bir hesap oluşturuyoruz. Ardından anasayfada
+                    "New Repository" butonuna tıklayarak ya da sağ üstteki <code style="font-size: 20px">+</code> ya
+                    tıklayarak
+                    "New Repository" seçeneğini seçerek ve yeni bir repository oluşturuyoruz. "Repository" bizim
+                    dosyalarımızı tutacak, bizim için ayrılacak alana verilen isimdir.
+                </p>
+                <p>
+                    Tıkladıktan sonra karşımıza gelen sayfada "Repository Name" alanına projemizin adını boşluk bırakmadan yazıyoruz. "Description" kısmına ise projemizin açıklamasını yazabiliriz ya da boş bırakabiliriz.
+                    Projemiz Açık Kaynak Kodlu ise "Public" seçeneğini, kapalı ise "Private" seçiyoruz ve "Create Repository" butonuna tıklıyoruz.
+                </p>
+            </div>
+        </li>
+    </ol>
+</div>
+<code class="lead" style="color: green;">git code</code>
+</body>
+</html>
