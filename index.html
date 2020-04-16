@@ -150,10 +150,43 @@
                     Tıkladıktan sonra karşımıza gelen sayfada "Repository Name" alanına projemizin adını boşluk bırakmadan yazıyoruz. "Description" kısmına ise projemizin açıklamasını yazabiliriz ya da boş bırakabiliriz.
                     Projemiz Açık Kaynak Kodlu ise "Public" seçeneğini, kapalı ise "Private" seçiyoruz ve "Create Repository" butonuna tıklıyoruz.
                 </p>
+                <br>
+                <p>
+                    Ardından karşımıza çıkan yönergeler şunlar olacaktır:
+                </p>
+                <p>
+                    <kbd>
+                        echo "# asdasd" >> README.md <br>
+                        git init<br>
+                        git add README.md<br>
+                        git commit -m "first commit"<br>
+                        git remote add origin https://github.com/berkaygulsen/asdasd.git<br>
+                        git push -u origin master
+                    </kbd>
+                </p>
+                <p>
+                    Bize buradaki adımların ilk dördünü yaptığımız için bize sadece son iki adım gerekli. Yukarıda anlatıldığı üzere terminal ya da console'da
+                    projemizin dizinine gidiyoruz ve komut satırına: <br> <br>
+                    <kbd>
+                        git remote add origin https://github.com/berkaygulsen/asdasd.git<br>
+                    </kbd>
+                    <br>
+                    yazıp Enter'a basıyoruz ve ardından da <br> <br>
+                    <kbd>
+                        git push -u origin master
+                    </kbd>
+                    <br> <br>
+                    yazıp Enter'a basıyoruz. Burada bize GitHub kullanıcı adımızı soracaktır. Kullanıcı adımızı yazıp Enter'lıyoruz.
+                    Ardından parolamızı soracak, ancak komut satırlarında parola girerken girdiğimiz karakterleri ve girdiğimiz karakterlerin sayısını göremeyiz.
+                    Bu yüzden parolamızı doğru girdiğimizden emin olduktan sonra Enter'a basıyoruz ve projemiz GitHub'a gönderilmiş oluyor. Bundan sonra yaptığımız değişiklikleri <kbd>git add .</kbd> komutuyla ekleyip
+                    <kbd>commit -m "yaptığımız değişikliklerle ilgili bilgiler"</kbd> komutuyla kesinleştireceğiz ve ardından da GitHub'a <kbd>push</kbd>layacağız.
+                </p>
             </div>
         </li>
     </ol>
 </div>
-<code class="lead" style="color: green;">git code</code>
+<div style="margin: 20px; text-align: center ">
+    <span>Hazırlayan: Berkay Gülşen</span>
+</div>
 </body>
 </html>
